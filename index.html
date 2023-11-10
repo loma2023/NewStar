@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="CSS/login.css">
+    <title>New Star</title>
+</head>
+
+<body>
+
+    <div class="Msg-Box" id="">
+        <div class="Message">
+            <i class="fa fa-right-to-bracket"></i>
+            <h1>جارِ تسجيل الدخول</h1>
+            <div class="loader">
+                <div class="load"></div>
+            </div>
+            <div class="btn-oky"></div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="forms-container">
+            <div class="signin-signup">
+                <form action="#" class="sign-in-form">
+                    <h2 class="title">Sign in</h2>
+
+                    <div class="input-field">
+                        <i class="fas fa-user"></i><input type="text" placeholder="Username" required="required"
+                            class="username" />
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Password" required="required" class="password" />
+                        <i onclick="showPassword(event)" class="eye fas fa-eye"></i>
+                    </div>
+
+                    <input type="button" value="Login" class="btn solid" onclick="login()">
+
+                    <p class="social-text">تابعنا علي مواقع التواصل</p>
+                    <div class="social-media">
+                        <a href="https://www.facebook.com/faceloma/" class="fab fa-facebook-f"></a>
+                        <a href="https://wa.me/201158347657" class="fab fa-whatsapp"></a>
+                        <a href="https://www.instagram.com/faceloma/?hl=ar" class="fab fa-instagram"></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                </div>
+                <img src="CSS/log.svg" class="image" alt="" />
+            </div>
+        </div>
+    </div>
+
+    <script src="JS/login.js"></script>
+</body>
+
+
+</html>

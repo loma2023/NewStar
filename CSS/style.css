@@ -1,0 +1,682 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+
+}
+
+:root {
+    --red: #ee3600;
+    --white: #fff;
+    --white2: #fff;
+    --white3: #8a8a8a8a;
+    --sky: #ee3600;
+    --blue: #037b67;
+    --orange: #ffc400;
+    --box-shadow: inset -5px -5px 10px #141618, inset 5px 5px 10px #1a1c20;
+    --background: #000;
+    --background2: #24272c;
+    --background3: #17191c;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    direction: rtl;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    background: var(--background2);
+    position: relative;
+}
+
+.body-active {
+    --box-shadow: 0 2px 10px rgb(144, 128, 128);
+    --background: linear-gradient(to bottom, #1b4770, #132e47, #122a41, #151515);
+    --background2: #fff;
+    --background3: #fff;
+    --white: #000;
+    --sky: #000;
+    --white3: rgba(31, 30, 30, 0.250);
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    padding-bottom: 200px;
+    display:none;
+    transition: .4s;
+    overflow-y: scroll;
+}
+
+section::-webkit-scrollbar {
+    display: none;
+}
+
+section .container {
+    padding: 20px 5px;
+}
+
+.section-active {
+    display: block;
+}
+
+
+.header {
+    width: 100%;
+    border-radius: 0;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0px;
+    background: var(--background2);
+    box-shadow: var(--box-shadow);
+    color: var(--white);
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
+    z-index: 99;
+}
+
+.header a {
+    width: 100%;
+    color: var(--white);
+    padding: 5px 0;
+    text-align: center;
+    border-radius: 0px;
+}
+
+.header a:hover,
+.header .hoverd {
+    color: var(--red);
+}
+
+.header a:hover i,
+.header .hoverd i {
+    color: var(--red);
+}
+
+.header a i {
+    display: flex;
+    width: 35px;
+    height: 30px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    margin: 0 auto;
+    background: var(--background2);
+    box-shadow: var(--box-shadow);
+    color: var(--white);
+    border-radius: 8px;
+}
+
+.header a span {
+    font-size: 15px;
+}
+
+.HomePage .container1 {
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0 0 30px 30px;
+    background: var(--background3);
+    box-shadow: var(--box-shadow);
+    color: var(--white);
+
+}
+
+.HomePage .container1 img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+}
+
+.HomePage .container1 p {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--red);
+    margin-bottom: 5px;
+}
+
+.HomePage .container1 h1 {
+    font-size: 26px;
+    font-weight: 900;
+}
+
+
+.HomePage .container2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    background: var(--background2);
+    box-shadow: var(--box-shadow);
+    color: var(--white);
+    width: 50%;
+    font-size: 18px;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 8px;
+    padding: 8px 0;
+}
+
+.HomePage .container2 a {
+    width: 100%;
+    padding: 10px;
+    background: #fff;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 10px;
+    color: var(--white);
+    background: var(--background2);
+    box-shadow: var(--box-shadow);
+}
+
+.HomePage .container2 a:hover {
+    background: var(--blue);
+    color: var(--white2);
+    box-shadow: 0 0 0 0;
+}
+
+.HomePage .container2 a:hover i {
+    color: var(--white);
+}
+
+
+.HomePage .container2 i {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    line-height: 50px;
+    font-size: 30px;
+    background: var(--background2);
+    box-shadow: var(--box-shadow);
+    border-radius: 50%;
+}
+
+
+.HomePage .container3,
+.section3 .container3 {
+    display: block;
+    padding: 20px;
+}
+
+.HomePage .container3 a,
+.section3 .container3 a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    font-size: 12px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    background: var(--background3);
+    box-shadow: var(--box-shadow);
+    color: var(--white);
+}
+
+.HomePage .container3 a:hover,
+.section3 .container3 a:hover {
+    background: var(--blue);
+    color: var(--white2);
+    box-shadow: 0 0 0 0;
+}
+
+.toggle-div {
+    width: 40px;
+    height: 22px;
+    border-radius: 25px;
+    background: var(--sky);
+    transition: 0.5s;
+    box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
+        inset 0 8px 8px rgba(0, 0, 0, 0.1),
+        inset 0 -4px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    position: relative;
+}
+
+.toggle-div .toggle {
+    width: 20px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--white2);
+    transform: scale(0.9);
+    transition: 0.5s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.toggle-div .toggleActive {
+    right: 20px;
+}
+
+
+.HomePage .container3 a div,
+.section3 .container3 a div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.HomePage .container3 a img,
+.section3 .container3 a img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
+
+.HomePage .container3 a i,
+.section3 .container3 a i {
+    font-size: 20px;
+}
+
+.section3 .container3 a i {
+    margin-left: 10px;
+
+}
+
+
+.Sec-Img {
+    width: 100%;
+    height: 200px;
+    padding: 10px 0;
+}
+
+
+/* any form */
+form {
+    width: 100%;
+    padding: 7px;
+    text-align: center;
+    margin-top: 10px;
+    direction: rtl;
+    background: var(--background);
+    border-radius: 8px;
+}
+
+input,
+select {
+    width: 100%;
+    height: 40px;
+    padding: 5px 30px;
+    margin: 5px 0;
+    font-size: 20px;
+    border-radius: 8px;
+    background: var(--background3);
+    color: var(--white);
+    outline: none;
+    border: 1px solid var(--white);
+}
+
+.btn_save {
+    cursor: pointer;
+    background: var(--orange);
+    box-shadow: 0px 5px 15px rgba(1, 1, 1, 25%);
+    border: none;
+    color: #000;
+}
+
+
+.form_search div,
+.form_insert div {
+    position: relative;
+    width: 100%;
+}
+
+.form_search div a,
+.form_insert div a,
+.iteem .search_bar i {
+    font-size: 1.2rem;
+    position: absolute;
+    top: 13px;
+    color: var(--white);
+}
+
+.form_search div a,
+.form_insert div a {
+    right: 10px;
+}
+
+.iteem .search_bar i {
+    left: 10px;
+}
+
+.iteem {
+    position: relative;
+    width: 100%;
+}
+
+.iteem .search_list {
+    width: 100%;
+    height: 150px;
+    background: var(--background2);
+    box-shadow: var(--box-shadow);
+    color: var(--white);
+    border-radius: 8px;
+    padding: 10px;
+    text-align: start;
+    overflow-y: scroll;
+}
+
+.iteem .search_list::-webkit-scrollbar {
+    display: none;
+}
+
+.iteem .search_list h3 {
+    font-size: 18px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--white);
+}
+
+
+.parent-table {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 15px;
+    overflow-x: auto;
+}
+
+.MyTable {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+}
+
+.MyTable tr {
+    color: var(--white);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+.MyTable thead td {
+    font-weight: 600;
+    padding: 10px;
+    border: 1px solid var(--white3);
+    background: var(--background);
+    color: var(--white2);
+}
+
+.MyTable tbody td {
+    border: 1px solid var(--white3);
+    text-decoration: none;
+    padding: 10px;
+}
+
+.MyTable tr:hover {
+    cursor: default;
+}
+
+.MyTable tbody tr:hover {
+    background: var(--blue);
+    color: var(--white2);
+}
+
+.MyTable tbody tr:hover td {
+    border: 1px solid var(--white2);
+}
+
+.MyTable tr a {
+    margin: 0 5px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+
+
+.Top {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    color: var(--white);
+    position: relative;
+    border-radius: 8px;
+}
+
+.Top img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 6px solid #eaeaea;
+}
+
+
+.Top h2,
+.Top p {
+    margin-top: 10px;
+}
+
+.Top .fa-pen-to-square {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: var(--white2);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background: var(--background);
+}
+
+.upload {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    margin: 20px auto;
+}
+
+.upload img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 6px solid #eaeaea;
+    position: absolute;
+    top: 0;
+}
+
+.upload .input-icon {
+    background: #000000b9;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+
+.upload .input-icon .file {
+    position: absolute;
+    transform: scale(2);
+    opacity: 0;
+    cursor: pointer;
+}
+
+.upload .input-icon .fa-camera {
+    color: #fff;
+    font-size: 18px;
+}
+
+/* MsgBox */
+
+.Msg-Box {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 0;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    top: -200vh;
+    left: 0;
+    transition: 0.5s;
+    background: #09090929;
+}
+
+.active {
+    top: 0;
+}
+
+.Page_load {
+    width: 100%;
+    height: 100vh;
+    background: var(--white2);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    transition: 0.5s;
+    position: fixed;
+    z-index: 1000;
+    top: 0px;
+    left: 0px;
+}
+
+.Done {
+    display: none
+}
+
+.Message {
+    width: 90%;
+    padding: 20px;
+    box-shadow: 0px 5px 15px rgba(1, 1, 1, 25%);
+    background: var(--white2);
+    color: var(--blue);
+    border-radius: 10px;
+}
+
+.Message i {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px;
+    background: var(--background);
+    box-shadow: var(--box-shadow);
+    color: var(--white2);
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 50px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.Message h1 {
+    font-size: 25px;
+}
+
+.Message .btn-oky {
+    font-size: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+    text-align: center;
+    justify-content: space-between;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.Message .btn-oky a {
+    background: var(--orange);
+    margin: 0 5px;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+
+.Message .loader {
+    margin: 15px auto 0;
+    width: 90%;
+    height: 10px;
+    position: sticky;
+}
+
+.Message .loader .load {
+    width: 0%;
+    height: 100%;
+    background: var(--background);
+    animation: load 0.7s infinite linear;
+}
+
+@keyframes load {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.ico-search {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+    color: var(--white2);
+    background: var(--background);
+    border-radius: 50%;
+    border: 1px solid var(--blue);
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: 0.3s;
+    cursor: pointer;
+    position: fixed;
+    bottom: 70px;
+    left: 0;
+}
+
+.parent-power {
+    margin-top: 5px;
+    padding-top: 5px;
+    color: var(--white);
+}
+
+
+.powers {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+    margin-top: 10px;
+    border: 1px solid var(--blue);
+    direction: rtl;
+}
+
+@media (max-width:600px) {
+    .MyTable {
+        width: 250%;
+    }
+
+}
+
+@media (max-width:280px) {
+    .MyTable tr a {
+        margin: 0 1px;
+    }
+}
