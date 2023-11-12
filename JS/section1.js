@@ -241,7 +241,7 @@ function OTime() {
     let xx = x.split(":")
     let yy = y.split(":")
 
-    document.querySelector(".subtotal").value = (((yy[0] - xx[0]) * 60) + (yy[1] - xx[1])) / 60
+    document.querySelector(".subtotal").value = ((((yy[0] - xx[0]) * 60) + (yy[1] - xx[1])) / 60).toFixed(2)
 
 
 }
